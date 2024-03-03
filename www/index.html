@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_index.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Välkommen till mig!</h1>
+            <td><a href="/profile/{{username}}"  method="get" target="frame">Profil</a></td>
+            <td><a href="/calendar/user/{{username}}"  method="get" target="frame">Min kalender</a></td>
+            <td><a href="/calendar/city/{{username}}"  method="get" target="frame">Min stads kalender</a></td>
+            <td><a href="/friends/{{username}}"  method="get" target="frame">Mina vänner</a></td>
+            <td><a href="/event/create"  method="get" target="frame">Skapa event</a></td>
+        </nav>
+    </header>
+
+    <iframe src="day.html" title="calendar" name="frame"></iframe>
+</body>
+</html>

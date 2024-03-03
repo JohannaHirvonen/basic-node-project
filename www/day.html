@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_day.css">
+</head>
+<body>
+
+    <div class="calendar">
+        <div class="col monthView">
+            <div class="content">
+                <h2 class="month">september</h2>
+                <div class="clearfix"></div>
+                <ul class="weekday">
+                    <li><a href="#" title="Mon" data-value="1">Mån</a></li>
+                    <li><a href="#" title="Tue" data-value="2">Tis</a></li>
+                    <li><a href="#" title="Wed" data-value="3">Ons</a></li>
+                    <li><a href="#" title="Thu" data-value="4">Tor</a></li>
+                    <li><a href="#" title="Fri" data-value="5">Fre</a></li>
+                    <li><a href="#" title="Sat" data-value="6">Lör</a></li>
+                    <li><a href="#" title="Sun" data-value="7">Sön</a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <ul class="days">
+                    <script>
+                        for( var _i = 1; _i <= 31; _i += 1 ){
+                            var _addClass = '';
+                            if( _i === 12 ){ _addClass = ' class="selected"'; }
+                            
+                            switch( _i ){
+                                case 8:
+                                case 10:
+                                case 27:
+                                    _addClass = ' class="event"';
+                                break;
+                            }
+
+                            document.write( '<li><a href="#" title="'+_i+'" data-value="'+_i+'"'+_addClass+'>'+_i+'</a></li>' );
+                        }
+                    </script>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="col selectedDay">
+            <div class="content">
+                <h1 class="date">Fredag 12/9</h1>
+                <div class="notes">
+                    <p>
+                        <input type="text" value="" placeholder="new note"/>
+                        <a href="#" title="Add note" class="addNote animate">+</a>
+                    </p>
+                    <ul class="noteList">
+                        <li>Headbutt a lion<a href="#" title="Remove note" class="removeNote animate">x</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</body>
+</html>
